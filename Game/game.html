@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Counter Challenge</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🍎 Fruit Counter Challenge 🍌</h1>
+
+<div class="scoreboard">
+    <h2>Apple : <span id="appleScore">0</span></h2>
+    <h2>Banana : <span id="bananaScore">0</span></h2>
+    <h2>Total : <span id="totalScore">0</span></h2>
+
+    <button id="resetBtn">Reset Game</button>
+</div>
+
+<div class="container">
+
+<div class="card">
+    <div id="appleImg" class="fruit">🍎</div>
+
+    <button id="appleBtn">Collect Apple</button>
+</div>
+
+<div class="card">
+    <div id="bananaImg" class="fruit">🍌</div>
+
+    <button id="bananaBtn">Collect Banana</button>
+</div>
+
+</div>
+
+<div id="winnerScreen">
+    <h1 id="winnerText"></h1>
+    <button onclick="resetGame()">Play Again</button>
+</div>
+
+<div id="confetti"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
