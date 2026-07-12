@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Currency Converter</h1>
+
+        <!-- Amount -->
+
+        <label>Enter Amount</label>
+
+        <input type="number" id="amount" placeholder="Enter Amount">
+
+        <!-- From Currency -->
+
+        <label>From</label>
+
+        <select id="from">
+
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="USD">🇺🇸 US Dollar (USD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+            <option value="NPR">🇳🇵 Nepalese Rupee (NPR)</option>
+            <option value="BDT">🇧🇩 Bangladeshi Taka (BDT)</option>
+
+        </select>
+
+        <!-- To Currency -->
+
+        <label>To</label>
+
+        <select id="to">
+
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="USD">🇺🇸 US Dollar (USD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+            <option value="NPR">🇳🇵 Nepalese Rupee (NPR)</option>
+            <option value="BDT">🇧🇩 Bangladeshi Taka (BDT)</option>
+
+        </select>
+
+        <button onclick="convertCurrency()">
+
+            Convert
+
+        </button>
+
+        <h2 id="result">
+
+            Converted Amount
+
+        </h2>
+
+    </div>
+
+    <script src="Script.js"></script>
+
+</body>
+
+</html>
