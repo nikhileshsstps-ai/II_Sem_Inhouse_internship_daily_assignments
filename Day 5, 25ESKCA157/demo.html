@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA</title>
+</head>
+
+<body>
+    <h1>CGPA Calculator</h1>
+    <button onclick="CalculateCGPA(cgpa)">CGPA</button>
+    <script>
+        const firstName = "Nikhilesh";
+        const lastName = "Verma";
+        const studentId = "12345";
+        const year = "2025";
+        const cgpa = "9.0";
+
+        console.log(`---student profile---`);
+        console.log(` Name:   ${firstName} ${lastName}`);
+        console.log(`Id:  ${studentId}`);
+        console.log(`year:  ${year}`);
+        console.log(`cgpa:  ${cgpa}`);
+
+        console.log(`grade:  ${calcGrade(cgpa)}`);
+
+        function calcGrade(cgpa) {
+            if (cgpa >= 9.0) return "A+";
+            else if (cgpa >= 8.0) return "A";
+            else if (cgpa >= 7.0) return "B+";
+            else if (cgpa >= 6.0) return "B";
+            else if (cgpa >= 5.0) return "C";
+            else if (cgpa >= 4.0) return "D";
+            else return "F";
+        }
+    </script>
+</body>
+
+</html>
