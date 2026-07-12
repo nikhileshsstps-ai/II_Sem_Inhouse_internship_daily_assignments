@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+<link rel="stylesheet" href="Style.css">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f2f2f2;
+        }
+
+        .container{
+            width:400px;
+            margin:40px auto;
+            padding:20px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        input,select{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        input[type=radio]{
+            width:auto;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:darkgreen;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2 align="center">Registration Form</h2>
+
+<form action="registration.php" method="POST">
+
+
+<label>Full Name</label>
+<input type="text" name="fullName" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Phone Number</label>
+<input type="text" name="phoneNumber" placeholder="Enter phone number" required>
+
+<label>Gender</label><br>
+
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Transgender"> Transgender
+<input type="radio" name="gender" value="Other"> Other
+
+<br><br>
+
+<label>Date of Birth</label>
+<input type="date" name="dtDOB" required>
+
+<label>Password</label>
+<input type="password" name="pwdpassword" required>
+
+<label>Address</label>
+<input type="text" name="address" required>
+
+<label>City</label>
+<input type="text" name="city" required>
+
+<label>Country</label>
+
+<select name="country" required>
+    <option value="">Select Country</option>
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+</select>
+
+<select name="branch" required>
+    <option value="">Select Branch</option>
+    <option value="AI">AI</option>
+    <option value="CS">CS</option>
+    <option value="DS">DS</option>
+    <option value="IOT">IOT</option>
+</select>
+
+<form action="registration.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="profileImage" accept="image" required>
+    <button type="submit">Upload Image</button>
+</form>
+<br>
+
+<div>
+<label for="qualification">Qualification:</label>
+<br>
+C++
+<input type="checkbox" id="qualification" name="C++" required>
+C
+<input type="checkbox" id="qualification" name="C" required>
+Java
+<input type="checkbox" id="qualification" name="Java" required>
+</div>
+
+
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
