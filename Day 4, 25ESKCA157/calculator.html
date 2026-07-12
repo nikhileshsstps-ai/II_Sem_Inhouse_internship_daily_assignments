@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+            
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="number1" placeholder="Enter First Number"/>
+        <input type="text" id="number2" placeholder="Enter Second Number"/>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button type="button"
+        oneclick="performarithmeticoperations">
+        Perform Arithmetic Operations
+        </button>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        function performarithmeticoperations(){
+            let varl = 10;
+            const pi = 3.14;
+            const number1=parseFloat(document.getElementById("number1").value);
+            const number2=parseFloat(document.getElementById("number2").value);
+            const operator=parseFloat(document.getElementById("operator").value);
+            var var2 = 20;
+            var2;
+            var var2 = 10;
+        }
+    </script>
+</body>
+</html>

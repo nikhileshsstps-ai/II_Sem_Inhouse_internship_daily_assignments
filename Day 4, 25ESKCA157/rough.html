@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Game</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:linear-gradient(135deg,#1d2671,#c33764);
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .container{
+        text-align:center;
+        background:rgba(255,255,255,0.1);
+        padding:30px;
+        border-radius:20px;
+        width:600px;
+        box-shadow:0 0 20px rgba(0,0,0,.4);
+    }
+
+    h1{
+        margin-top:0;
+    }
+
+    #timer{
+        font-size:45px;
+        margin:20px;
+        font-weight:bold;
+        color:yellow;
+    }
+
+    .players{
+        display:flex;
+        justify-content:space-around;
+        margin-top:30px;
+    }
+
+    .player{
+        width:200px;
+    }
+
+    .count{
+        font-size:60px;
+        margin:15px 0;
+    }
+
+    button{
+        padding:10px 20px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+    }
+
+    .addBtn{
+        background:#00c853;
+        color:white;
+    }
+
+    .restart{
+        margin-top:25px;
+        background:#ff9800;
+        color:white;
+        display:none;
+    }
+
+    #result{
+        margin-top:25px;
+        font-size:36px;
+        font-weight:bold;
+        color:#fff;
+    }
+
+    #winner{
+        font-size:28px;
+        color:#ffe600;
+        margin-top:15px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Counter Battle</h1>
+
+    <div id="timer">30</div>
+
+    <div class="players">
+
+        <div class="player">
+            <h2>Player 1</h2>
+            <div class="count" id="count1">0</div>
+            <button class="addBtn" onclick="increase(1)">+1</button>
+        </div>
+
+        <div class="player">
+            <h2>Player 2</h2>
+            <div class="count" id="count2">0</div>
+            <button class="addBtn" onclick="increase(2)">+1</button>
+        </div>
+
+    </div>
+
+    <div id="result"></div>
+    <div id="winner"></div>
+
+    <button class="restart" id="restartBtn" onclick="restartGame()">
+        Restart Game
+    </button>
+
+</div>
+
+<script>
+
+let time = 30;
+let score1 = 0;
+let score2 = 0;
+let gameOver = false;
+
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(function(){
+
+    time--;
+    timer.innerHTML = time;
+
+    if(time<=0){
+
+        clearInterval(countdown);
+        endGame();
+
+    }
+
+},1000);
+
+function increase(player){
+
+    if(gameOver) return;
+
+    if(player==1){
+        score1++;
+        document.getElementById("count1").innerHTML=score1;
+    }
+    else{
+        score2++;
+        document.getElementById("count2").innerHTML=score2;
+    }
+
+}
+
+function endGame(){
+
+    gameOver=true;
+
+    document.getElementById("result").innerHTML="🎮 Game End";
+
+    setTimeout(function(){
+
+        if(score1>score2){
+            document.getElementById("winner").innerHTML="🏆 Winner: Player 1";
+        }
+        else if(score2>score1){
+            document.getElementById("winner").innerHTML="🏆 Winner: Player 2";
+        }
+        else{
+            document.getElementById("winner").innerHTML="🤝 It's a Draw!";
+        }
+
+        document.getElementById("restartBtn").style.display="inline-block";
+
+    },1500);
+
+}
+
+function restartGame(){
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>
