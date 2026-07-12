@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Counter Game</title>
+<style>
+    
+    body{
+        position: relative;
+        margin: 0;
+        height: 100vh;
+    }
+    img{
+        width: 100px;
+        position: absolute;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <p>Apple: <span id="Apple">0</span></p>
+    <p>Banana: <span id="Banana">0</span></p>
+
+    <img src="apple.png" onclick="clickImage('apple', this)">
+    <img src="banana.png" onclick="clickImage('banana', this)">
+
+<script>
+    let apple=0,banana=0;
+
+    document.querySelectorAll("img").forEach(img => {
+        img.style.left=Math.random() * (window.innerWidth-100)+"px";
+        img.style.top=Math.random() * (window.innerHeight-120)+"px";
+    });
+
+    function clickImage(type,img){
+        if(type=="apple"){
+            document.getElementById("Apple").innerText=++apple;
+        }else{
+            document.getElementById("Banana").innerText=++banana;
+        }
+        img.style.left=Math.random() * (window.innerWidth-100)+"px";
+        img.style.top=Math.random() * (window.innerHeight-120)+"px";
+        }
+
+</script>
+</body>
+</html>
