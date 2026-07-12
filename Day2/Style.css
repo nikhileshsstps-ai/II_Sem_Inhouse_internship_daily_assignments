@@ -1,0 +1,25 @@
+body{
+    background:#4f9ce4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:rgb(252, 175, 134);
+    width:1000px;
+    padding:25px;
+    border-radius:2px;
+}
+
+label{
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}

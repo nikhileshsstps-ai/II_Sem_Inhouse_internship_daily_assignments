@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Registration</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="container">
+    <center>
+    <form>
+        <h1 style="color:black">Registration Form</h1>
+        <br>
+        <label>
+        
+            Name:
+            <input type="text" id="name" required placeholder=" Enter your name">
+        </label>
+        <br>
+        <label>
+            Email:
+            <input type="email" id="email" required placeholder=" Enter your email">
+        </label>
+        <br>
+        <label>
+            Phone number:
+            <input type="text" id="phone" required placeholder=" Enter your phone no">
+        </label>
+        <br>
+        
+        <label>
+            Gender:
+        </label>
+        <br>
+        <input type="radio" id="check-Male" name="gender"/>
+        <label for="check-Male">Male</label>
+        <br>
+
+        <input type="radio" id="check-Female" name="gender"/>
+        <label for="check-Female">Female</label>
+        <br>
+
+        <input type="radio" id="check-Transgender" name="gender"/>
+        <label for="check-Transgender">Transgender</label>
+        <br>
+
+        <input type="radio" id="check-Other" name="gender"/>
+        <label for="check-Other">Other</label>
+        <br>
+
+        <label for="dtDOB">DOB</label>
+        <input type="date" id="dtDOB" name="dtDOB" />
+        <br>
+
+        <label for="pwdpassword">Password</label>
+        <input type="password" id="pwdpassword" name="pwdpassword"/>
+        <br>
+        
+        <label>
+           Address:
+            <input type="text" id="address" required placeholder=" Enter your street address">
+        </label>
+
+        <br>
+        <label>
+            City:
+            <input type="text" id="city" required placeholder=" Enter your city">
+        </label>
+
+        <br>
+        <label>
+            Country:
+            <select>
+                    <option>Select Country</option>
+                    <option>India</option>
+                    <option>Pakistan</option>
+                    <option>USA</option>
+                    <option>Canada</option>
+                </select>
+        </label>
+        <br>
+        <button type="Submit" style="background-color:bisque">Submit</button>
+    </form>
+
+    </center>    
+</div>
+</body>
+</html>
